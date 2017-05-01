@@ -8,6 +8,7 @@ import callspeak.model.CallPeak;
 import callspeak.model.Interval;
 
 public class MaxFinder {
+	
 	public CallPeak find(List<Interval> intervals) {
 		int[] starts = new int[intervals.size()];
 		int[] ends = new int[intervals.size()];

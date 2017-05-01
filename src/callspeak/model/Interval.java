@@ -6,8 +6,8 @@ public class Interval {
 	
 	public Interval(String rawData) {
 		String[] arr = rawData.split(":");
-		start = Integer.valueOf(arr[0]);
-		end = Integer.valueOf(arr[1]);
+		start = Integer.parseInt(arr[0]);
+		end = Integer.parseInt(arr[1]);
 	}
 
 	public int getStart() {

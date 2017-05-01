@@ -12,6 +12,7 @@ import java.util.stream.Stream;
 import callspeak.model.Interval;
 
 public class LogReader {
+	
 	public List<Interval> getLogs(String filePath) {
 		List<Interval> list = emptyList();
 		try (Stream<String> lines = Files.lines(Paths.get(filePath))) {
