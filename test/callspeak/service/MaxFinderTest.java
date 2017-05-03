@@ -39,4 +39,19 @@ public class MaxFinderTest {
 		
 		assertThat(maxFinder.find(intervals), is(new CallPeak(5, 5, 6)));
 	}
+	
+	@Test
+	public void test2() {
+		List<Interval> intervals = asList(new Interval("1:2"), new Interval("2:3"), new Interval("3:4"));
+		
+		assertThat(maxFinder.find(intervals), is(new CallPeak(2, 2, 2)));
+	}
+	
+	@Test
+	public void test3() {
+		List<Interval> intervals = asList(new Interval("1:2"), new Interval("2:3"), new Interval("3:4"),
+				new Interval("2:6"));
+		
+		assertThat(maxFinder.find(intervals), is(new CallPeak(3, 2, 3)));
+	}
 }

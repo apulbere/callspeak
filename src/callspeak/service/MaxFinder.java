@@ -33,8 +33,8 @@ public class MaxFinder {
 				if (calls > max) {
 					max = calls;
 					startTime = starts[i];
+					endTime = ends[j];
 				}
-				endTime = ends[j];
 				i++; 
 			} else {
 				calls--;
