@@ -22,7 +22,11 @@ public class MaxFinderTest {
 	
 	@Test
 	public void test() {
-		List<Interval> intervals = asList(new Interval("1:2"), new Interval("2:3"), new Interval("2:5"));
+		List<Interval> intervals = asList(
+				new Interval("1:2"),
+				new Interval("2:3"),
+				new Interval("2:5")
+		);
 		
 		assertThat(maxFinder.find(intervals), is(new CallPeak(3, 2, 2)));
 	}
@@ -42,15 +46,23 @@ public class MaxFinderTest {
 	
 	@Test
 	public void test2() {
-		List<Interval> intervals = asList(new Interval("1:2"), new Interval("2:3"), new Interval("3:4"));
+		List<Interval> intervals = asList(
+				new Interval("1:2"),
+				new Interval("2:3"),
+				new Interval("3:4")
+		);
 		
 		assertThat(maxFinder.find(intervals), is(new CallPeak(2, 2, 2)));
 	}
 	
 	@Test
 	public void test3() {
-		List<Interval> intervals = asList(new Interval("1:2"), new Interval("2:3"), new Interval("3:4"),
-				new Interval("2:6"));
+		List<Interval> intervals = asList(
+				new Interval("1:2"),
+				new Interval("2:3"),
+				new Interval("3:4"),
+				new Interval("2:6")
+		);
 		
 		assertThat(maxFinder.find(intervals), is(new CallPeak(3, 2, 3)));
 	}
