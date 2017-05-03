@@ -4,10 +4,9 @@ public class Interval {
 	private int start;
 	private int end;
 	
-	public Interval(String rawData) {
-		String[] arr = rawData.split(":");
-		start = Integer.parseInt(arr[0]);
-		end = Integer.parseInt(arr[1]);
+	public Interval(int start, int end) {
+		this.start = start;
+		this.end = end;
 	}
 
 	public int getStart() {
@@ -17,5 +16,4 @@ public class Interval {
 	public int getEnd() {
 		return end;
 	}
-
 }
